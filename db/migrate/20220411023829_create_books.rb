@@ -11,7 +11,6 @@ class CreateBooks < ActiveRecord::Migration[7.0]
       t.string :description3
       t.string :image
       t.string :googlevolumeid
-      t.timestamps :createdate
       
       t.timestamps
     end
