@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   namespace :api do
+      #baseapi
+      get '/', to: 'baseapi#index'
       #library
       put '/library/:userid', to: 'library#update'
       get '/library/:userid', to: 'library#show'
