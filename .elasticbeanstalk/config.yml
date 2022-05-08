@@ -2,5 +2,27 @@ branch-defaults:
   default:
     environment: null
     group_suffix: null
+  main:
+    environment: maybook-dev
+    group_suffix: null
+environment-defaults:
+  maybook-app-dev:
+    branch: null
+    repository: null
+  maybook-dev:
+    branch: null
+    repository: null
 global:
+  application_name: maybook-app
+  branch: null
+  default_ec2_keyname: null
+  default_platform: Ruby 2.7 running on 64bit Amazon Linux 2
+  default_region: us-west-2
+  include_git_submodules: true
+  instance_profile: null
+  platform_name: null
+  platform_version: null
   profile: null
+  repository: null
+  sc: git
+  workspace_type: Application
