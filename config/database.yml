@@ -14,18 +14,22 @@
 # Configure Using Gemfile
 # gem "pg"
 #
-default: &default
-  adapter: postgresql
-  encoding: unicode
+#default: &default
+ # adapter: postgresql
+ # encoding: unicode
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: postgres
-  password: oranges
+ # pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  #username: postgres - uncomment when using localhost
+  #password: oranges - uncomment when using localhost
 
-development:
-  <<: *default
-  database: focusapi_development
+
+#development:
+ # <<: *default
+ # database: focusapi_development
+
+ #development:
+ # url: <%= ENV['DATABASE_URL'] %>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -57,9 +61,9 @@ development:
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
-test:
-  <<: *default
-  database: focusapi_test
+#test:
+#  <<: *default
+#  database: focusapi_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -68,7 +72,8 @@ test:
 # Instead, provide the password or a full connection URL as an environment
 # variable when you boot the app. For example:
 #
-#   DATABASE_URL="postgres://myuser:mypass@localhost/somedatabase"
+#  DATABASE_URL="postgres://myuser:mypass@localhost/somedatabase"
+# DATABASE_URL=postgres://gzgnssuvkfirzh:206e80766ae8a3e878bbd89ffd18b1d17d5f1b39e35c2fa5cb10e17296c6f0bd@ec2-52-200-215-149.compute-1.amazonaws.com:5432/d6trpc34ml55n8
 #
 # If the connection URL is provided in the special DATABASE_URL environment
 # variable, Rails will automatically merge its configuration values on top of
