@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_02_192603) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_10_180947) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -25,14 +25,22 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_02_192603) do
     t.string "title"
     t.string "author"
     t.string "category1"
-    t.string "category2"
-    t.string "category3"
     t.string "description1"
-    t.string "description2"
-    t.string "description3"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "image"
+    t.string "googlevolumeid"
+    t.string "category2"
+    t.string "category3"
+    t.string "description2"
+    t.string "description3"
+  end
+
+  create_table "bookstacks", force: :cascade do |t|
+    t.text "books"
+    t.text "userids"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "libraries", force: :cascade do |t|

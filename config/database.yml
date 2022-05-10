@@ -14,19 +14,19 @@
 # Configure Using Gemfile
 # gem "pg"
 #
-#default: &default
- # adapter: postgresql
- # encoding: unicode
+default: &default
+  adapter: postgresql
+  encoding: unicode
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
- # pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  #username: postgres - uncomment when using localhost
-  #password: oranges - uncomment when using localhost
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: postgres
+  password: oranges
 
 
-#development:
- # <<: *default
- # database: focusapi_development
+development:
+  <<: *default
+  database: focusapi_development
 
  #development:
  # url: <%= ENV['DATABASE_URL'] %>

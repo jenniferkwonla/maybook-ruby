@@ -42,6 +42,15 @@ class AccountController < ApplicationController
         render json: {error: 'Unable to update Account.', status: 400 }
       end 
     end
+
+
+    def destroy
+      if params[:id]
+        @userId = params[:id]
+        Account.find(@userId).destroy
+        render status: 200
+      end
+    end
     
     private
     def account_params

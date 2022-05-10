@@ -54,9 +54,7 @@ class BookController < ApplicationController
   def googlevolumeids
     @googlevolumeids = Book.distinct.pluck(:googlevolumeid)
     render json: @googlevolumeids, status: 200
-
   end
-
 
   # PUT /book/:title -- not in use 
   def update

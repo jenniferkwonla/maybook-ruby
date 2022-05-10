@@ -1,0 +1,2 @@
+class Bookstack < ApplicationRecord
+end

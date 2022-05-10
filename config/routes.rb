@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       get '/account/:userid', to: 'account#show'
       get '/account', to: 'account#index'
       post '/account', to: 'account#create'
+      post '/account/:id', to: 'account#destroy'
       #book
       get '/book/author/:author', to: 'book#show'
       get '/book/title/:title', to: 'book#show'
@@ -20,6 +21,10 @@ Rails.application.routes.draw do
       get '/book/:id', to: 'book#show'
       get '/book', to: 'book#index'
       post '/book', to: 'book#create'
-      put '/book/:id', to: 'book#update'
+      #bookstack
+      get '/bookstack', to: 'bookstack#index'
+      get '/bookstack/:maxbookstoprocess', to: 'bookstack#show'
+      post '/bookstack/:bookid', to: 'bookstack#update'
+
   end
 end
